@@ -65,16 +65,16 @@ class Table extends Component {
               <th className="duration">Date of Birth</th>
             </tr>
           </thead>
-          <tbody>{this.people.map((item, key) => rows(item))}</tbody>
+          <tbody>{this.people.map((item, key) => rows(item, key))}</tbody>
         </table>
       </div>
     );
   }
 }
 
-const rows = data => {
+const rows = (data, key) => {
   return (
-    <tr>
+    <tr key={key}>
       <td>{data.name}</td>
       <td>{data.birth}</td>
     </tr>
