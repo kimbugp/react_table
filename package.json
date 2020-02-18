@@ -1,0 +1,24 @@
+{
+  "name": "birthday-records",
+  "version": "0.1.0",
+  "dependencies": {
+    "create-react-app": "^1.4.3",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17",
+    "save": "^2.3.1"
+  },
+  "scripts": {
+    "start": "HOST=0.0.0.0 PORT=8000 ./node_modules/.bin/react-scripts start",
+    "test": "rm -rf ./unit.xml; CI=true TEST_REPORT_FILENAME=./unit.xml ./node_modules/.bin/react-scripts test --verbose --env=jsdom --testResultsProcessor ./node_modules/jest-junit-reporter"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "expect": "^21.2.1",
+    "react-test-renderer": "^16.2.0",
+    "jest-junit-reporter" : "^1.1.0"
+  }
+}
