@@ -42,17 +42,23 @@ class Table extends Component {
   compareDates(person1, person2) {
     let date1 = new Date(person1.birth);
     let date2 = new Date(person2.birth);
-    if (date1 === date2) {
-      return 0;
+    if (date1 <= date2) {
+      return -1;
     }
-    return 1;
+    if (date1 >= date2) {
+      return 1;
+    }
+    return 0;
   }
 
   compareNames(person1, person2) {
-    if (person1.name === person2.name) {
-      return 0;
+    if (person1.name <= person2.name) {
+      return -1;
     }
-    return 1;
+    if (person1.name >= person2.name) {
+      return 1;
+    }
+    return 0;
   }
 
   render() {
