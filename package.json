@@ -1,5 +1,5 @@
 {
-  "name": "birthday-records",
+  "name": "simple-react-table",
   "version": "0.1.0",
   "dependencies": {
     "create-react-app": "^1.4.3",
@@ -20,5 +20,22 @@
     "expect": "^21.2.1",
     "react-test-renderer": "^16.2.0",
     "jest-junit-reporter": "^1.1.0"
-  }
+  },
+  "description": "A simple react table",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimbugp/react_table.git"
+  },
+  "keywords": [
+    "react",
+    "table",
+    "simple"
+  ],
+  "author": "Kimbugwe Simon Peter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimbugp/react_table/issues"
+  },
+  "homepage": "https://github.com/kimbugp/react_table#readme"
 }
