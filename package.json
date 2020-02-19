@@ -1,6 +1,6 @@
 {
   "name": "sortable-react-table",
-  "version": "0.0.2",
+  "version": "0.0.9",
   "dependencies": {
     "create-react-app": "^1.4.3",
     "prop-types": "^15.6.0",
@@ -11,21 +11,43 @@
   },
   "scripts": {
     "start": "HOST=0.0.0.0 PORT=8000 ./node_modules/.bin/react-scripts start",
-    "test": "rm -rf ./unit.xml; CI=true TEST_REPORT_FILENAME=./unit.xml ./node_modules/.bin/react-scripts test --verbose --env=jsdom --testResultsProcessor ./node_modules/jest-junit-reporter"
+    "test": "rm -rf ./unit.xml; CI=true TEST_REPORT_FILENAME=./unit.xml ./node_modules/.bin/react-scripts test --verbose --env=jsdom --testResultsProcessor ./node_modules/jest-junit-reporter",
+    "release": "standard-version"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "chai": "^4.1.2",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "expect": "^21.2.1",
+    "husky": "^4.2.3",
+    "jest-junit-reporter": "^1.1.0",
     "react-test-renderer": "^16.2.0",
-    "jest-junit-reporter": "^1.1.0"
+    "standard-version": "^7.1.0"
   },
   "description": "A simple react table",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kimbugp/react_table.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  },
+  "standard-version": {
+    "skip": {
+      "tag": true
+    }
   },
   "keywords": [
     "react",
