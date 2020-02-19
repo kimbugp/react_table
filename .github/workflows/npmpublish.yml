@@ -17,6 +17,15 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm test
+      - name: add git credentials
+        run: |
+          git config --global user.name ${GITHUB_ACTOR}
+          git config --global user.email ${GITHUB_ACTOR}@users.noreply.github.com
+          git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+      - run: |
+          npm run release
+      - run: |
+          git push --follow-tags github HEAD:${GITHUB_REF}
 
   publish-npm:
     needs: build

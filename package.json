@@ -1,6 +1,6 @@
 {
   "name": "sortable-react-table",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "dependencies": {
     "create-react-app": "^1.4.3",
     "prop-types": "^15.6.0",
@@ -42,6 +42,11 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "npm test",
       "pre-push": "npm test"
+    }
+  },
+  "standard-version": {
+    "skip": {
+      "tag": true
     }
   },
   "keywords": [
