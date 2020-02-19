@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/kimbugp/react_table/compare/v0.0.6...v0.0.9) (2020-02-19)
+
+
+### Bug Fixes
+
+* **update:** update scope ([7f3ffab](https://github.com/kimbugp/react_table/commit/7f3ffabb368dc075f5b52622c7cd2cf0f26ff937))
+
 ### [0.0.8](https://github.com/kimbugp/react_table/compare/v0.0.6...v0.0.8) (2020-02-19)
 
 
