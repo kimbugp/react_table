@@ -24,7 +24,7 @@ class App extends Component {
           <h1>Birthday Records</h1>
         </center>
         <Radio sortBy={this.sortByParameter} />
-        <Table />
+        <Table parameter={this.state.parameterState} />
       </div>
     );
   }

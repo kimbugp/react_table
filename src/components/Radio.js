@@ -14,8 +14,10 @@ class Radio extends Component {
   onChange(type) {
     const { id } = type.target;
     this.setState({
-      radio: id
+      radio: id,
+      radioClick: id
     });
+    this.props.sortBy(id);
   }
   sortBy(value) {
     this.setState({
@@ -40,7 +42,6 @@ class Radio extends Component {
             type="radio"
             onChange={this.onChange}
             id="age"
-            checked={this.props}
             checked={this.state.radio === "age"}
           />
           <label>&nbsp;&nbsp;Sort by age</label>

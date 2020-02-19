@@ -62,6 +62,8 @@ class Table extends Component {
   }
 
   render() {
+    const compare =
+      this.props.parameter === "name" ? this.compareNames : this.compareDates;
     return (
       <div className="table-div">
         <table className="table table-striped table-bordered table-hover full-width">
@@ -71,7 +73,9 @@ class Table extends Component {
               <th className="duration">Date of Birth</th>
             </tr>
           </thead>
-          <tbody>{this.people.map((item, key) => rows(item, key))}</tbody>
+          <tbody>
+            {this.people.sort(compare).map((item, key) => rows(item, key))}
+          </tbody>
         </table>
       </div>
     );
