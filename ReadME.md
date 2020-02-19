@@ -7,7 +7,7 @@ A Simple React Component
 ## Install
 
 ```sh
-npm install --save react_table
+npm install --save sortable-react-table
 ```
 
 ## Settings
@@ -15,7 +15,7 @@ npm install --save react_table
 ```js
 import React from "react";
 import ReactDom from "react-dom";
-import SimpleTable from "react_table";
+import SimpleTable from "sortable-react-table";
 
 class App extends React.Component {
   render() {
