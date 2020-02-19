@@ -32,6 +32,7 @@ class Radio extends Component {
           onChange={this.onChange}
           radio={this.state.radio}
           index={index}
+          key={index}
         />
       );
     });

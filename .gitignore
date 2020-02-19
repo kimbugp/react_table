@@ -225,3 +225,4 @@ pickle-email-*.html
 
 # Ignore node_modules
 node_modules/
+unit.xml
