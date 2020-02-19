@@ -1,6 +1,6 @@
 {
   "name": "sortable-react-table",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "dependencies": {
     "create-react-app": "^1.4.3",
     "prop-types": "^15.6.0",
