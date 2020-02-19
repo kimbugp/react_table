@@ -1,5 +1,5 @@
 {
-  "name": "sortable-react-table",
+  "name": "@kimbugp/sortable-react-table",
   "version": "0.0.5",
   "dependencies": {
     "create-react-app": "^1.4.3",
