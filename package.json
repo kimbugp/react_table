@@ -10,6 +10,8 @@
     "save": "^2.3.1"
   },
   "scripts": {
+    "predeploy": "npm run build-pages",
+    "deploy": "cp src/demo.js src/index.js && gh-pages -d build",
     "start": "HOST=0.0.0.0 PORT=8000 ./node_modules/.bin/react-scripts start",
     "build-pages": "cp src/demo.js src/index.js && ./node_modules/.bin/react-scripts build",
     "test": "rm -rf ./unit.xml; CI=true TEST_REPORT_FILENAME=./unit.xml ./node_modules/.bin/react-scripts test --verbose --env=jsdom --testResultsProcessor ./node_modules/jest-junit-reporter",
@@ -22,6 +24,7 @@
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "expect": "^21.2.1",
+    "gh-pages": "^2.2.0",
     "husky": "^4.2.3",
     "jest-junit-reporter": "^1.1.0",
     "react-test-renderer": "^16.2.0",
@@ -60,5 +63,5 @@
   "bugs": {
     "url": "https://github.com/kimbugp/react_table/issues"
   },
-  "homepage": "https://github.com/kimbugp/react_table#readme"
+  "homepage": "http://kimbugp.github.io/react_table"
 }
