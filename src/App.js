@@ -9,14 +9,13 @@ class SimpleTable extends Component {
     this.state = {
       parameterState: "name"
     };
-    this.sortByParameter = this.sortByParameter.bind(this);
   }
 
-  sortByParameter(parameter) {
+  sortByParameter = parameter => {
     this.setState({
       parameterState: parameter
     });
-  }
+  };
 
   render() {
     return (
