@@ -7,23 +7,16 @@ class Radio extends Component {
     this.state = {
       radioClick: "name"
     };
-    this.onChange = this.onChange.bind(this);
-    this.sortBy = this.sortBy.bind(this);
   }
 
-  onChange(type) {
+  onChange = type => {
     const { id } = type.target;
     this.setState({
       radio: id,
       radioClick: id
     });
     this.props.sortBy(id);
-  }
-  sortBy(value) {
-    this.setState({
-      parameterState: value
-    });
-  }
+  };
 
   render() {
     return (

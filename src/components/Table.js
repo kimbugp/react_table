@@ -39,7 +39,7 @@ class Table extends Component {
       }
     ];
   }
-  compareDates(person1, person2) {
+  compareDates = (person1, person2) => {
     let date1 = new Date(person1.birth);
     let date2 = new Date(person2.birth);
     if (date1 <= date2) {
@@ -49,9 +49,9 @@ class Table extends Component {
       return 1;
     }
     return 0;
-  }
+  };
 
-  compareNames(person1, person2) {
+  compareNames = (person1, person2) => {
     if (person1.name <= person2.name) {
       return -1;
     }
@@ -59,7 +59,7 @@ class Table extends Component {
       return 1;
     }
     return 0;
-  }
+  };
 
   render() {
     const compare =
