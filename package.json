@@ -11,6 +11,7 @@
   },
   "scripts": {
     "start": "HOST=0.0.0.0 PORT=8000 ./node_modules/.bin/react-scripts start",
+    "build-pages": "cp src/demo.js src/index.js && ./node_modules/.bin/react-scripts build",
     "test": "rm -rf ./unit.xml; CI=true TEST_REPORT_FILENAME=./unit.xml ./node_modules/.bin/react-scripts test --verbose --env=jsdom --testResultsProcessor ./node_modules/jest-junit-reporter",
     "release": "standard-version"
   },
